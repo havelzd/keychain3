@@ -1,0 +1,26 @@
+<h1 class="my-4">Appearance</h1>
+<section class="section">
+  <form class="space-y-4">
+    <h2>Theme:</h2>
+    <div class="cluster">
+      <app-theme-choice
+        _label="Light"
+        _id="light"
+        _value="light"
+        _name="theme"
+        (changed)="onThemeChange('light')" />
+      <app-theme-choice
+        _label="Dark"
+        _id="dark"
+        _value="dark"
+        _name="theme"
+        (changed)="onThemeChange('dark')" />
+      <app-theme-choice
+        _label="System"
+        _id="system"
+        _value="system"
+        _name="theme"
+        (changed)="onThemeChange('system')" />
+    </div>
+  </form>
+</section>

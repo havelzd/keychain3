@@ -1,0 +1,20 @@
+{
+  "name": "@repo/styles",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/styles.css",
+  "styles": "dist/styles.css",
+  "scripts": {
+    "build": "sass --style=compressed src/styles.scss dist/styles.css",
+    "dev": "sass --style=compressed src/styles.scss dist/styles.css --watch"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.87.0"
+  }
+}

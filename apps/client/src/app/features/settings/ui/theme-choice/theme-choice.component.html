@@ -1,0 +1,13 @@
+<div class="theme-input">
+  <div
+    class="theme-preview"
+    [class]="_value()"></div>
+  <label [for]="_id()">{{ _label() }}</label>
+  <input
+    [id]="_id()"
+    [checked]="isChecked()"
+    [name]="_name()"
+    [value]="_value()"
+    type="radio"
+    (change)="changed.emit(_value())" />
+</div>

@@ -1,0 +1,43 @@
+@use '../tokens';
+
+:root {
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color-scheme: light;
+    @each $color, $value in tokens.$light {
+      --#{$color}: #{$value};
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    @each $color, $value in tokens.$dark {
+      --#{$color}: #{$value};
+    }
+  }
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  @each $color, $value in tokens.$dark {
+    --#{$color}: #{$value};
+  }
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+  @each $color, $value in tokens.$light {
+    --#{$color}: #{$value};
+  }
+}
+
+html {
+  font-size: 100%;
+  font-family: #{tokens.$font-family};
+  background-color: var(--bg-secondary);
+}

@@ -1,0 +1,56 @@
+/* You can add global styles to this file, and also import other style files */
+@import '@repo/styles/dist/styles.css';
+
+#app-wrapper {
+  display: grid;
+  grid-template-areas:
+    'header header'
+    'menu main';
+  grid-template-rows: auto 1fr;
+  grid-template-columns: auto 1fr;
+  flex-direction: column;
+  height: 100dvh;
+  max-height: 100dvh;
+}
+
+header {
+  grid-area: header;
+  padding-block: 1rem;
+  background-color: var(--primary-400);
+}
+
+aside {
+  grid-area: menu;
+}
+
+main {
+  grid-area: main;
+  flex: 1;
+  border-left: 1px solid var(--neutral-300);
+}
+
+.page-wrapper {
+  display: flex;
+  height: 100%;
+  max-width: 100%;
+}
+
+.content-wrapper {
+  padding: 1rem;
+}
+
+.menu-resize-box {
+  min-width: 250px;
+  height: 100%;
+  max-width: 600px;
+}
+
+.resize-handle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 100%;
+  background-color: var(--neutral-300);
+  cursor: col-resize;
+}

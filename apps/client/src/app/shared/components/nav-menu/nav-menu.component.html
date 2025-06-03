@@ -1,0 +1,16 @@
+<div
+  class="menu-resize-box"
+  appResizable>
+  <ul class="page-nav">
+    @for (item of items(); track item.label) {
+      <li>
+        <a
+          class="nav__item"
+          [routerLink]="item.route"
+          routerLinkActive="nav__item--active"
+          ><ng-icon [svg]="item.icon" />{{ item.label }}</a
+        >
+      </li>
+    }
+  </ul>
+</div>

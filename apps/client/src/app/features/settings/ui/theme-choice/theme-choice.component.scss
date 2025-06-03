@@ -1,0 +1,48 @@
+:host {
+  display: inline-block;
+}
+.theme-input {
+  position: relative;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 1px solid var(--neutral-300);
+  min-width: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  & > label {
+    display: block;
+    text-align: center;
+  }
+
+  & input {
+    cursor: pointer;
+    border-radius: inherit;
+    appearance: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    &:checked {
+      outline: 2px solid var(--primary-500);
+    }
+  }
+}
+
+.theme-preview {
+  height: 3rem;
+  aspect-ratio: 1;
+
+  &.dark {
+    background-color: black;
+  }
+  &.light {
+    background-color: white;
+  }
+  &.system {
+    background: linear-gradient(45deg, #000 50%, #fff 50%);
+  }
+}

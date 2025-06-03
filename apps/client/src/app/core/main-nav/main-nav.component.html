@@ -1,0 +1,16 @@
+<nav>
+  <ul class="nav">
+    @for (item of menuItems; track item.label) {
+      <li>
+        <a
+          class="nav__item"
+          [routerLink]="[item.route]"
+          routerLinkActive="nav__item--active"
+          ><ng-icon
+            class="nav__item__icon"
+            [svg]="item.icon" />{{ item.label }}</a
+        >
+      </li>
+    }
+  </ul>
+</nav>

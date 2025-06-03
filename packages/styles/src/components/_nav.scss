@@ -1,0 +1,63 @@
+@use '../tokens';
+
+// main side nav
+.nav {
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: #{tokens.$nav-item-gap};
+    align-items: center;
+    padding: #{tokens.$nav-padding};
+    color: var(--neutral-900);
+    text-decoration: none;
+
+    &__icon {
+      font-size: 1.2em;
+    }
+
+    &--active {
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 2px;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 60%;
+        width: 2px;
+        background-color: var(--primary-500);
+      }
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .side-nav {
+    flex-direction: row;
+  }
+}
+
+// menu nav
+.page-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  height: 100%;
+
+  .nav__item {
+    padding: 0.5rem 1rem;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: flex-start;
+
+    &--active {
+      background-color: var(--neutral-highlight);
+    }
+  }
+}

@@ -1,0 +1,44 @@
+$base-space: 0.25rem;
+
+.space {
+  @for $i from 0 through 12 {
+    &-y-#{$i} > :not(:last-child) {
+      margin-bottom: #{$i * $base-space};
+    }
+
+    &-x-#{$i} > :not(:last-child) {
+      margin-bottom: #{$i * $base-space};
+    }
+  }
+}
+
+.p {
+  @for $i from 0 through 12 {
+    &#{$i} {
+      padding: #{$i * $base-space};
+    }
+
+    &x-#{$i} {
+      padding-inline: #{$i * $base-space};
+    }
+
+    &y-#{$i} {
+      padding-block: #{$i * $base-space};
+    }
+  }
+}
+
+.m {
+  @for $i from 0 through 12 {
+    &#{$i} {
+      margin: #{$i * $base-space};
+    }
+    &x-#{$i} {
+      margin-inline: #{$i * $base-space};
+    }
+
+    &y-#{$i} {
+      margin-block: #{$i * $base-space};
+    }
+  }
+}

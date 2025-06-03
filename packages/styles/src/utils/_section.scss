@@ -1,0 +1,11 @@
+.section {
+  padding-inline: 1rem;
+  padding-block: 1rem;
+  border-radius: 0.25rem;
+  background-color: var(--bg-primary);
+  box-shadow:
+    rgba(0, 0, 0, 0.13) 0px 1.6px 3.6px,
+    rgba(0, 0, 0, 0.11) 0px 0px 2.9px;
+
+  /* 0px 1.6px 3.6px rgba(0,0,0,0.2543144461965935), 0px 0px 2.9px rgba(0,0,0,0.21518914678173293) */
+}
