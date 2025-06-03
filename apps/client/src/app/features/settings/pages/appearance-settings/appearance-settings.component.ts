@@ -1,5 +1,5 @@
-import { DOCUMENT } from '@angular/common';
-import { ChangeDetectionStrategy, Component, inject, signal, OnInit } from '@angular/core';
+
+import { ChangeDetectionStrategy, Component, inject, signal, OnInit, DOCUMENT } from '@angular/core';
 import { ThemeChoiceComponent } from '../../ui/theme-choice/theme-choice.component';
 
 @Component({
