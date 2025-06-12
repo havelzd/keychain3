@@ -15,7 +15,8 @@
 
 header {
   grid-area: header;
-  padding-block: 1rem;
+  display: flex;
+  justify-content: space-between;
   background-color: var(--primary-400);
 }
 

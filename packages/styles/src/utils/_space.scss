@@ -42,3 +42,11 @@ $base-space: 0.25rem;
     }
   }
 }
+
+.gap {
+  @for $i from 0 through 12 {
+    &-#{$i} {
+      gap: #{$i * $base-space};
+    }
+  }
+}

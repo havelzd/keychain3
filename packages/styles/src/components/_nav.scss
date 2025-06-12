@@ -3,7 +3,12 @@
 // main side nav
 .nav {
   display: flex;
-  flex-direction: column;
+
+  &--vert {
+    flex-direction: column;
+    padding-block: 0.5rem;
+    gap: 0.5rem;
+  }
 
   &__item {
     display: flex;
